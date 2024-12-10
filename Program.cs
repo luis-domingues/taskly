@@ -1,7 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using Taskly.Context;
+using Taskly.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddScoped<UserService>();
 
 builder.Services.AddDbContext<TasklyContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
