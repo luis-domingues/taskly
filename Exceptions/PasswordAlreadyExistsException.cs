@@ -1,6 +1,6 @@
 ﻿namespace Taskly.Exceptions;
 
-public class PasswordAlreadyExistsException
-{
-    
+public class PasswordAlreadyExistsException : Exception
+{ 
+    public PasswordAlreadyExistsException(string message) : base(message) {  }
 }

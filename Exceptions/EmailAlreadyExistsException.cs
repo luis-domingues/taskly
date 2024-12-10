@@ -1,6 +1,6 @@
 ﻿namespace Taskly.Exceptions;
 
-public class EmailAlreadyExistsException
+public class EmailAlreadyExistsException : Exception
 {
-    
+    public EmailAlreadyExistsException(string message) : base(message) {  }
 }

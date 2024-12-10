@@ -1,6 +1,6 @@
 ﻿namespace Taskly.Exceptions;
 
-public class UsernameNull
+public class UsernameNull : Exception
 {
-    
+    public UsernameNull(string message) : base(message) {  }
 }
